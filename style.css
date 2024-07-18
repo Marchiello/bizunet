@@ -1,0 +1,116 @@
+*{
+    color: white;
+    font-family: "Bebas Neue", sans-serif
+}
+
+body{
+    background-image: url(background.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    display: block;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.76);
+    display: flex;
+    line-height: 6.5em;
+    font-family: "Bebas Neue", sans-serif
+
+}
+
+.conteudo{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 75em;    
+}
+
+#title{
+    font-size: 42px;
+}
+
+nav{
+    margin-left: auto;
+    font-size: 26px;
+    
+}
+nav>a{
+    margin: 6px;
+    border-radius: 5px;
+}
+
+/* -------------------------------------- Main */
+
+main{
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70em;
+}
+
+#telaIntroducao{
+    background-color: rgba(0, 0, 0, 0.692);
+    height: 8em;
+    width: 80%;
+    padding: 1.5em;
+    font-size: 32px;
+}
+
+#tituloIntroducao{
+    font-size: 48px;
+    font-weight: bold;
+    margin-left: 0.7em;
+}
+
+.barra{
+    background-color: white;
+    height: 8px;
+}
+
+#terceiraBarra{
+    margin-left: 5em;
+    margin-top: 10px;
+}
+
+#telaIntroducao>p{
+    /* background-color: antiquewhite; */
+    width: 20em;
+    text-align:justify;
+    margin-left: 2.6em;
+}
+
+#telaIntroducao>img{
+    display: flex;
+    width: 13.5em;
+    top: -12em;
+    left: 20.9em;
+    position: relative;
+    /* background-color: aliceblue; */
+}
+
+
+/* -------------------------------------- Footer */
+
+footer{
+    background-color: rgba(0, 0, 0, 0.753);
+    margin-top: 100%;
+    width: 100%;
+    height: 10em;
+    max-height: 4em;
+    line-height: 4em;
+}
+
+footer>.conteudo>p{
+    margin-right: auto;
+}
+
+footer>.conteudo>a{
+    height: fit-content;
+    border-radius: 5px;
+}
+/* ---------------------------------- Animações */
+
+.botao:hover{
+    transition: 0.4s;
+    background-color: rgba(253, 255, 144, 0.5);
+}
