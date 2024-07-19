@@ -5,10 +5,12 @@
 
 body{
     background-image: url(background.jpg);
-    background-size: 100%;
+    background-size: 130%;
     background-attachment: fixed;
     display: block;
 }
+
+/* -------------------------------- Header */
 
 header{
     background-color: rgba(0, 0, 0, 0.76);
@@ -89,6 +91,10 @@ main{
     /* background-color: aliceblue; */
 }
 
+.opcao{
+
+}
+
 
 /* -------------------------------------- Footer */
 
@@ -122,6 +128,142 @@ footer>.conteudo>a{
 #conteudo{
     background-color: rgba(0, 0, 0, 0.733);
     height: auto;
-    width: auto;
+    max-width: 70em;
     margin-top: 0px;
+}
+
+#menu{
+    display: none;
+}
+
+/* ================================= Responsividade */
+
+
+
+@media(max-width:1365px){ /* Monitor mais quadradão */
+
+    /* ------------------ Geral */
+
+    body{
+        background-size: 130%;
+    }
+
+    .conteudo{
+        width: 55em;
+    }
+
+    /* ------------------- Página Inicial */
+
+    #telaIntroducao{
+        width: 18.9em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #telaIntroducao>img{
+        left: 10em;
+    }
+
+    #telaIntroducao>p{
+        width: 13em;
+        margin-left: 1em;
+        text-align: rg;
+    }
+
+    footer{
+        margin-top: 50%;
+    }
+
+    /* -------------------------- */
+
+}
+
+
+@media(max-width: 450px){ /* Telefone */
+    
+    body{
+        background-size: 320%;
+    }
+
+    /* ------------------------------- Header */
+
+
+    #title{
+        font-size: 3.2em;
+        line-height: 3.2em;
+        margin-left: 0.5em;
+    }
+
+    .conteudo{
+        max-width: 350px;
+    }
+
+    nav{
+        display: none;        
+    }
+ 
+    #menu{
+        display: inline;
+        margin-left: auto;
+        margin-right: 0.4em;
+        font-size: 4em;
+        line-height: 2.5em;
+    }
+    
+    /* --------------------------------- Main */
+
+    main{
+        /* background-color: antiquewhite; */
+        display: block;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #telaIntroducao{
+        width: 260px;
+    }
+
+    #tituloIntroducao{
+        font-size: 1.5em;
+        margin-left: auto;
+        margin-right: 2e;
+    }
+
+    #tituloIntroducao>p{
+        margin-right: 50px;
+    }
+
+    #telaIntroducao>p{
+        width: 6em;
+        text-align: left;
+        margin-left: 0.6em;
+        font-size: 40px;
+        /* background-color: aliceblue; */
+    }
+
+    #telaIntroducao>img{
+        left: 4.4em;
+        top: -17em;
+        width: 60%;
+    }
+
+    nav{
+        background-color: yellow;
+    }
+
+    footer{
+        margin-top: 40%;
+    }
+
+    footer>.conteudo>p{
+        font-size: 5px;
+        margin-right: 1px;
+    }
+
+    footer>.conteudo>div{
+        font-size: 2px;
+    }
+    
+
 }
