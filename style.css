@@ -7,7 +7,7 @@ body{
     background-image: url(background.jpg);
     background-size: 130%;
     background-attachment: fixed;
-    display: block;
+    display: grid;
 }
 
 /* -------------------------------- Header */
@@ -37,7 +37,7 @@ nav{
     
 }
 nav>a{
-    margin: 6px;
+    margin: 10px;
     border-radius: 5px;
 }
 
@@ -53,7 +53,7 @@ main{
 #telaIntroducao{
     background-color: rgba(0, 0, 0, 0.692);
     height: fit-content;
-    width: 80%;
+    width:24em;
     padding: 1.5em;
     font-size: 32px;
 }
@@ -77,8 +77,8 @@ main{
 #telaIntroducao>p{
     /* background-color: antiquewhite; */
     width: 20em;
-    text-align:justify;
-    margin-left: 2.6em;
+    text-align: left;
+    margin-left: 1.5em;
 }
 
 #telaIntroducao>img{
@@ -86,7 +86,7 @@ main{
     float: left;
     width: 13.5em;
     top: -12em;
-    left: 20.9em;
+    left: 16.9em;
     position: relative;
     /* background-color: aliceblue; */
 }
@@ -139,8 +139,9 @@ footer>.conteudo>a{
 /* ================================= Responsividade */
 
 
+/*=-=-=-=-==-=-=-=-=-=-=-==-=-=- Monitor mais quadradão */
 
-@media(max-width:1365px){ /* Monitor mais quadradão */
+@media(max-width:1365px){ 
 
     /* ------------------ Geral */
 
@@ -161,13 +162,12 @@ footer>.conteudo>a{
     }
 
     #telaIntroducao>img{
-        left: 10em;
+        left: 11.7em;
     }
 
     #telaIntroducao>p{
-        width: 13em;
-        margin-left: 1em;
-        text-align: rg;
+        width: 15em;
+        margin-left: 1.5em;
     }
 
     footer{
@@ -178,20 +178,31 @@ footer>.conteudo>a{
 
 }
 
+/* =-=-=-==-==-=-==-==-=-==-=-==-=-=-=-=-= Telefone */
 
-@media(max-width: 450px){ /* Telefone */
+@media(max-width: 450px){ 
     
     body{
-        background-size: 320%;
+        background-size: 480%;
+        /* background-image: none; */
     }
 
     /* ------------------------------- Header */
 
 
+    header>.conteudo{
+        display: grid;
+        grid-template-areas: 
+        'titulo menuH'
+        'opcoes opcoes'
+        ;
+    }
+
     #title{
-        font-size: 3.2em;
-        line-height: 3.2em;
+        font-size: 2.6em;
+        line-height: 3.1em;
         margin-left: 0.5em;
+        grid-area: titulo;
     }
 
     .conteudo{
@@ -199,15 +210,17 @@ footer>.conteudo>a{
     }
 
     nav{
-        display: none;        
+        /* display: none;         */
+        grid-area: opcoes;
     }
  
     #menu{
         display: inline;
         margin-left: auto;
         margin-right: 0.4em;
-        font-size: 4em;
+        font-size: 3em;
         line-height: 2.5em;
+        grid-area: menuH;
     }
     
     /* --------------------------------- Main */
@@ -222,6 +235,7 @@ footer>.conteudo>a{
     
     #telaIntroducao{
         width: 260px;
+        /* display: none; */
     }
 
     #tituloIntroducao{
@@ -239,7 +253,6 @@ footer>.conteudo>a{
         text-align: left;
         margin-left: 0.6em;
         font-size: 40px;
-        /* background-color: aliceblue; */
     }
 
     #telaIntroducao>img{
@@ -249,20 +262,32 @@ footer>.conteudo>a{
     }
 
     nav{
-        background-color: yellow;
+        /* background-color: yellow; */
+        display: none;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    nav>a{
+        font-size: 1.8em;
+        border-top: 2px solid white;
+        width: 7.3em;
+        margin: 0px;
+        text-align: center;
+        text-decoration: none;
     }
 
     footer{
-        margin-top: 40%;
+        /* margin-top: 40%; */
     }
 
     footer>.conteudo>p{
-        font-size: 5px;
-        margin-right: 1px;
+        font-size: 1em;
     }
 
     footer>.conteudo>div{
-        font-size: 2px;
+        font-size: 1em;
     }
     
 
