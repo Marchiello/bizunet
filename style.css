@@ -1,294 +1,114 @@
-*{
-    color: white;
-    font-family: "Bebas Neue", sans-serif
-}
-
 body{
-    background-image: url(background.jpg);
-    background-size: 130%;
-    background-attachment: fixed;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    background-color: #44623f;
 }
 
-/* -------------------------------- Header */
+/* ---------------------- Global */
+
+a{
+    font-family: "Stardos Stencil", system-ui;
+    color: white;
+    text-decoration: none;
+}
+
+p{
+    font: normal 20pt Arial;
+    color: white;
+    text-align: justify;
+}
+
+h2{
+    font-family: "Stardos Stencil", system-ui;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+/* --------------------- Header */
 
 header{
-    background-color: rgba(0, 0, 0, 0.76);
+    float: unset;
+    background-image: linear-gradient(to bottom, rgb(26, 26, 26), rgb(26, 26, 26), rgb(26, 26, 26), transparent) ; /*Gambiarra Temporária*/
     display: flex;
-    line-height: 6.5em;
-    font-family: "Bebas Neue", sans-serif
-
+    height: 9em;
+    padding: 1em;
+    z-index: 1;
 }
 
-.conteudo{
+#camuflado{
+    margin-top: 3em;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+#titulo{
+    margin: 0.7em auto auto 0.8em;
+    font-size: 2.5em;
+}
+
+header nav{
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    width: 75em;
+    margin: 1em auto auto 0;
+    font-size: 2em;
+    gap: 1.5em;
 }
 
-#title{
-    font-size: 42px;
-}
-
-nav{
-    margin-left: auto;
-    font-size: 26px;
-    
-}
-nav>a{
-    margin: 10px;
-    border-radius: 5px;
-}
-
-/* -------------------------------------- Main */
+/* ---------------------- Main */
 
 main{
-    margin-top: 7em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 70em;
+    z-index: 1;
 }
 
-#telaIntroducao{
-    background-color: rgba(0, 0, 0, 0.692);
-    height: fit-content;
-    width:24em;
-    padding: 1.5em;
-    font-size: 32px;
+#textoIntro{
+    z-index: 2;
+    position: absolute;
+    text-align: justify;
+    font-size: 2em;
+    font-family: "Stardos Stencil", system-ui;
+    margin-top: 10%;
+    margin-left: 2em;
+    width: 25em;
+    color: white;
 }
 
-#tituloIntroducao{
-    font-size: 48px;
-    font-weight: bold;
-    margin-left: 0.7em;
+#imagem{
+    text-align: center;
+    margin-bottom: 2em;
 }
-
-.barra{
-    background-color: white;
-    height: 8px;
-}
-
-#terceiraBarra{
-    margin-left: 5em;
-    margin-top: 10px;
-}
-
-#telaIntroducao>p{
-    /* background-color: antiquewhite; */
-    width: 20em;
-    text-align: left;
-    margin-left: 1.5em;
-}
-
-#telaIntroducao>img{
-    display: flex;
-    float: left;
-    width: 13.5em;
-    top: -12em;
-    left: 16.9em;
-    position: relative;
-    /* background-color: aliceblue; */
-}
-
-.opcao{
-
-}
-
-
-/* -------------------------------------- Footer */
-
-footer{
-    background-color: rgba(0, 0, 0, 0.753);
-    margin-top: 40%;
+#imagem img{
+    /* margin: auto 0 auto 0; */
     width: 100%;
-    height: 10em;
-    max-height: 4em;
-    line-height: 4em;
 }
 
-footer>.conteudo>p{
-    margin-right: auto;
+/* == Principais Categorias */
+
+#opcoes{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 5em;
 }
 
-footer>.conteudo>a{
-    height: fit-content;
-    border-radius: 5px;
-}
-/* ---------------------------------- Animações */
-
-.botao:hover{
-    transition: 0.4s;
-    background-color: rgba(253, 255, 144, 0.5);
+.opcao div{
+    width: 25em;
+    height:25em;
+    background-color: #EEF87C;
 }
 
+/* == Objetivo */
 
-/* ================================ Outros */
-
-#conteudo{
-    background-color: rgba(0, 0, 0, 0.733);
-    height: auto;
-    max-width: 70em;
-    margin-top: 0px;
+#objetivo p{
+    width: 38em;
+    margin: auto;
+    text-align: center;
 }
 
-#menu{
-    display: none;
-}
-
-/* ================================= Responsividade */
-
-
-/*=-=-=-=-==-=-=-=-=-=-=-==-=-=- Monitor mais quadradão */
-
-@media(max-width:1365px){ 
-
-    /* ------------------ Geral */
-
-    body{
-        background-size: 130%;
-    }
-
-    .conteudo{
-        width: 55em;
-    }
-
-    /* ------------------- Página Inicial */
-
-    #telaIntroducao{
-        width: 18.9em;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #telaIntroducao>img{
-        left: 11.7em;
-    }
-
-    #telaIntroducao>p{
-        width: 15em;
-        margin-left: 1.5em;
-    }
-
-    footer{
-        margin-top: 50%;
-    }
-
-    /* -------------------------- */
-
-}
-
-/* =-=-=-==-==-=-==-==-=-==-=-==-=-=-=-=-= Telefone */
-
-@media(max-width: 450px){ 
-    
-    body{
-        background-size: 480%;
-        /* background-image: none; */
-    }
-
-    /* ------------------------------- Header */
-
-
-    header>.conteudo{
-        display: grid;
-        grid-template-areas: 
-        'titulo menuH'
-        'opcoes opcoes'
-        ;
-    }
-
-    #title{
-        font-size: 2.6em;
-        line-height: 3.1em;
-        margin-left: 0.5em;
-        grid-area: titulo;
-    }
-
-    .conteudo{
-        max-width: 350px;
-    }
-
-    nav{
-        /* display: none;         */
-        grid-area: opcoes;
-    }
- 
-    #menu{
-        display: inline;
-        margin-left: auto;
-        margin-right: 0.4em;
-        font-size: 3em;
-        line-height: 2.5em;
-        grid-area: menuH;
-    }
-    
-    /* --------------------------------- Main */
-
-    main{
-        /* background-color: antiquewhite; */
-        display: block;
-        margin-top: 2em;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #telaIntroducao{
-        width: 260px;
-        /* display: none; */
-    }
-
-    #tituloIntroducao{
-        font-size: 1.5em;
-        margin-left: auto;
-        margin-right: 2e;
-    }
-
-    #tituloIntroducao>p{
-        margin-right: 50px;
-    }
-
-    #telaIntroducao>p{
-        width: 6em;
-        text-align: left;
-        margin-left: 0.6em;
-        font-size: 40px;
-    }
-
-    #telaIntroducao>img{
-        left: 4.4em;
-        top: -17em;
-        width: 60%;
-    }
-
-    nav{
-        /* background-color: yellow; */
-        display: none;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    nav>a{
-        font-size: 1.8em;
-        border-top: 2px solid white;
-        width: 7.3em;
-        margin: 0px;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    footer{
-        /* margin-top: 40%; */
-    }
-
-    footer>.conteudo>p{
-        font-size: 1em;
-    }
-
-    footer>.conteudo>div{
-        font-size: 1em;
-    }
-    
-
+/* --------------- Footer */
+footer{
+    z-index: 1;
+    background-image: linear-gradient(to top, rgb(26, 26, 26), rgb(26, 26, 26), transparent);
+    height: 6em;
+    width: 100%;
 }
