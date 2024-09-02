@@ -13,25 +13,26 @@ a{
 }
 
 p{
-    font: normal 20pt Arial;
+    font: normal 2.5vw Arial;
     color: white;
     text-align: justify;
 }
 
-h2{
-    font-family: "Stardos Stencil", system-ui;
-    font-size: 2em;
+h2, h3{
+    font-family: Stencil, Helvetica, fantasy;
+    font-size: 3vw;
     color: white;
     text-align: center;
 }
 
+
+
 /* --------------------- Header */
 
 header{
-    float: unset;
     background-image: linear-gradient(to bottom, rgb(26, 26, 26), rgb(26, 26, 26), rgb(26, 26, 26), transparent) ; /*Gambiarra Temporária*/
     display: flex;
-    height: 9em;
+    height: 10vw;
     padding: 1em;
     z-index: 1;
 }
@@ -45,15 +46,21 @@ header{
 
 #titulo{
     margin: 0.7em auto auto 0.8em;
-    font-size: 2.5em;
+    font-size: 3.2vw;
 }
 
 header nav{
     display: flex;
     margin: 1em auto auto 0;
-    font-size: 2em;
+    font-size: 2.4vw;
     gap: 1.5em;
 }
+
+header nav a{
+    font-family: Stencil, Helvetica, fantasy;
+}
+
+
 
 /* ---------------------- Main */
 
@@ -65,44 +72,82 @@ main{
     z-index: 2;
     position: absolute;
     text-align: justify;
-    font-size: 2em;
-    font-family: "Stardos Stencil", system-ui;
+    font-size: 3vw;
+    font-family: Stencil, Helvetica, fantasy;
     margin-top: 10%;
     margin-left: 2em;
-    width: 25em;
+    width: 18em;
     color: white;
+    text-transform: uppercase;
 }
 
 #imagem{
-    text-align: center;
+    text-align: right;
     margin-bottom: 2em;
+    font-size: 2.1vw;
 }
 #imagem img{
     /* margin: auto 0 auto 0; */
     width: 100%;
 }
 
+/* == Semana Zero */
+
+#semanaZero{
+    width: fit-content;
+    margin: auto auto auto auto;
+}
+
+#semanaZero div{
+    margin:1vw auto 6vw auto;
+    /* background-color: #EEF87C; */
+    width: 40vw;
+    height: 20vw;
+}
+
+#semanaZero img{
+    width: 25vw;
+}
+
 /* == Principais Categorias */
 
 #opcoes{
+    /* background-color: aliceblue; */
+    height: 35vw;
     display: flex;
-    gap: 30px;
+    gap: 14px;
     justify-content: center;
-    margin-bottom: 5em;
+    margin: 1vw 0 7vw 0;
+}
+
+#opcoes a{
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    
 }
 
 .opcao div{
-    width: 25em;
-    height:25em;
+    width: 29vw;
+    height:29vw;
     background-color: #EEF87C;
+    transition: transform 0.4s ease;
+}
+
+
+.opcao h3{
+    line-height: 10vw;
+    color: black;
+    
 }
 
 /* == Objetivo */
 
 #objetivo p{
     width: 38em;
-    margin: auto;
+    margin: auto auto 3em auto;
     text-align: center;
+    
 }
 
 /* --------------- Footer */
@@ -111,4 +156,112 @@ footer{
     background-image: linear-gradient(to top, rgb(26, 26, 26), rgb(26, 26, 26), transparent);
     height: 6em;
     width: 100%;
+}
+
+#menu{
+    display: none;
+    font-size: 13vw;
+    color: white;
+    margin: 0.24em 8vw auto auto;
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    line-height: 1.3em;
+    border-radius: 10px;
+}
+
+/* ---------------- Responsividade */
+
+@media(max-width: 450px){ /* Mobile */
+
+    p{
+        font-size: 5vw;
+    }
+
+    h2{
+        font-size: 8vw;
+    }
+
+    header{
+        height: 33vw;
+    }
+    
+    #titulo{
+        font-size: 9vw;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    #menu{
+        display: inline;
+    }
+
+    #camuflado{
+        margin-top: 25vw;
+    }
+
+    #imagem{
+        margin-top: -7vw;
+        /* Ta podendo?? */
+    }
+
+    #textoIntro{
+        /* background-color: #EEF87C; */
+        margin: 5vw 0 auto 5vw;
+        font-size: 8vw;
+        width: 50vw;
+        height: 45vw;
+        overflow: hidden;
+    }
+
+    #credito{
+        display: none;
+    }
+
+
+    #semanaZero div{
+        width:80vw;
+        height: 50vw;
+    }
+
+    #semanaZero h2{
+        margin-bottom: 1em;
+    }
+
+    #opcoes{
+        gap:50px;
+        flex-direction: column;
+        height: 250vw;
+    }
+
+    .opcao div{
+        width: 70vw;
+        height: 70vw;
+        margin: auto;
+    }
+
+    .opcao h3{
+        font-size: 1.6em;
+    }
+
+    #objetivo p{
+        width: 90vw;
+    }
+
+
+
+
+}
+/* ------------ Decoracao */
+
+.botao:hover{
+    transition: 0.2s;
+    color: #EEF87C;
+}
+
+.opcao div:hover{
+    background-color: #ffffff;
+    transform: scale(1.1);
 }

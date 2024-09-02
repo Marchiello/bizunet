@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () =>{
 
     let menuIcone = document.querySelector('#menu');
-    let menuOpcoes = document.querySelector('#opcoes');
+    let menuOpcoes = document.querySelector('');
     let menuAtivado = true;
     
     console.log("Funcionando!")
