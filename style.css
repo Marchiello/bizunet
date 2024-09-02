@@ -19,7 +19,8 @@ p{
 }
 
 h2, h3{
-    font-family: Stencil, Helvetica, fantasy;
+    /* font-family: Stencil, Helvetica, fantasy; */
+    font-family: "Stardos Stencil", system-ui;
     font-size: 3vw;
     color: white;
     text-align: center;
@@ -57,7 +58,9 @@ header nav{
 }
 
 header nav a{
-    font-family: Stencil, Helvetica, fantasy;
+    /* font-family: Stencil, Helvetica, fantasy; */
+    font-family: "Stardos Stencil", system-ui;
+
 }
 
 
@@ -73,7 +76,8 @@ main{
     position: absolute;
     text-align: justify;
     font-size: 3vw;
-    font-family: Stencil, Helvetica, fantasy;
+    /* font-family: Stencil, Helvetica, fantasy; */
+    font-family: "Stardos Stencil", system-ui;
     margin-top: 10%;
     margin-left: 2em;
     width: 18em;
