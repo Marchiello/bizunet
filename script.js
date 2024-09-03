@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", () =>{
 
-    let menuIcone = document.querySelector('#menu');
-    let menuOpcoes = document.querySelector('');
+    let menuIcone = document.querySelector('#menuIcone');
+    let menuOpcoes = document.querySelector('#menuDiv');
     let menuAtivado = true;
-    
+    let camuflado = document.querySelector('#camuflado')
+
+
     console.log("Funcionando!")
     
     menuIcone.addEventListener('click', () => {

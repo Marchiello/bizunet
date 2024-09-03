@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family:'Lazer Game Zone';
+    src: url(sources/fonts/Lazer\ Game\ Zone.ttf) format('truetype');
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -21,12 +27,11 @@ p{
 h2, h3{
     /* font-family: Stencil, Helvetica, fantasy; */
     font-family: "Stardos Stencil", system-ui;
+    font-weight: bold;
     font-size: 3vw;
     color: white;
     text-align: center;
 }
-
-
 
 /* --------------------- Header */
 
@@ -40,7 +45,8 @@ header{
 
 #camuflado{
     margin-top: 3em;
-    width: 100%;
+    /* width: 100%; */
+    height: 16.36vw;
     z-index: 0;
     position: absolute;
 }
@@ -54,15 +60,35 @@ header nav{
     display: flex;
     margin: 1em auto auto 0;
     font-size: 2.4vw;
-    gap: 1.5em;
+    gap: 1.3em;
 }
 
 header nav a{
-    /* font-family: Stencil, Helvetica, fantasy; */
-    font-family: "Stardos Stencil", system-ui;
-
+    font-family: "Lazer Game Zone", system-ui;
+    font-size: 2.7vw;
 }
 
+/* ---------------------- Menu */
+
+#menu{
+    margin-bottom: 4vw;
+}
+
+#menuDiv{
+    background-color: rgb(26, 26, 26);
+    display: none;
+    flex-direction: column;
+    border-bottom: solid 3px white;
+    margin-bottom: 2vw;
+}
+
+.opcaoMenu{
+    border-top: solid 3px white;
+    padding: 2vw;
+    font-weight: bold;
+    text-align: center;
+    font-size: 8vw;
+}
 
 
 /* ---------------------- Main */
@@ -71,12 +97,23 @@ main{
     z-index: 1;
 }
 
+#imagem{
+    background-image: url(sources/images/bandeira2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 55vw;
+}
+
+#credito {
+    margin: -4vw 0vw 0vw 69vw;
+    font-size: 2.4vw;
+}
+
 #textoIntro{
     z-index: 2;
     position: absolute;
     text-align: justify;
     font-size: 3vw;
-    /* font-family: Stencil, Helvetica, fantasy; */
     font-family: "Stardos Stencil", system-ui;
     margin-top: 10%;
     margin-left: 2em;
@@ -91,7 +128,6 @@ main{
     font-size: 2.1vw;
 }
 #imagem img{
-    /* margin: auto 0 auto 0; */
     width: 100%;
 }
 
@@ -103,7 +139,7 @@ main{
 }
 
 #semanaZero div{
-    margin:1vw auto 6vw auto;
+    margin:2vw auto 6vw auto;
     /* background-color: #EEF87C; */
     width: 40vw;
     height: 20vw;
@@ -116,19 +152,17 @@ main{
 /* == Principais Categorias */
 
 #opcoes{
-    /* background-color: aliceblue; */
     height: 35vw;
     display: flex;
-    gap: 14px;
+    gap: 2px;
     justify-content: center;
-    margin: 1vw 0 7vw 0;
+    margin:-2vw 0 2vw 0;
 }
 
 #opcoes a{
     margin: auto;
     height: fit-content;
     width: fit-content;
-    
 }
 
 .opcao div{
@@ -142,7 +176,6 @@ main{
 .opcao h3{
     line-height: 10vw;
     color: black;
-    
 }
 
 /* == Objetivo */
@@ -151,7 +184,6 @@ main{
     width: 38em;
     margin: auto auto 3em auto;
     text-align: center;
-    
 }
 
 /* --------------- Footer */
@@ -162,7 +194,7 @@ footer{
     width: 100%;
 }
 
-#menu{
+#menuIcone{
     display: none;
     font-size: 13vw;
     color: white;
@@ -187,7 +219,9 @@ footer{
     }
 
     header{
-        height: 33vw;
+        height: 22vw;
+        background-image:none ;
+        background-color: rgb(26, 26, 26);
     }
     
     #titulo{
@@ -198,12 +232,13 @@ footer{
         display: none;
     }
 
-    #menu{
+    #menuIcone{
         display: inline;
     }
 
     #camuflado{
         margin-top: 25vw;
+        display: none;
     }
 
     #imagem{
@@ -212,9 +247,8 @@ footer{
     }
 
     #textoIntro{
-        /* background-color: #EEF87C; */
         margin: 5vw 0 auto 5vw;
-        font-size: 8vw;
+        font-size: 7vw;
         width: 50vw;
         height: 45vw;
         overflow: hidden;
@@ -224,20 +258,21 @@ footer{
         display: none;
     }
 
-
     #semanaZero div{
         width:80vw;
         height: 50vw;
+        margin-bottom: 15vw;
     }
 
     #semanaZero h2{
-        margin-bottom: 1em;
+        margin: 12vw 0vw 0 0
     }
 
     #opcoes{
-        gap:50px;
         flex-direction: column;
         height: 250vw;
+        margin: -7vw 0vw 8vw 0
+
     }
 
     .opcao div{
@@ -254,15 +289,23 @@ footer{
         width: 90vw;
     }
 
-
-
-
 }
 /* ------------ Decoracao */
 
 .botao:hover{
-    transition: 0.2s;
+    transition: 0.3s;
     color: #EEF87C;
+}
+
+.botao:not(:hover){
+    color: white;
+    /* transition: 0.3s */
+}
+
+.botaoC2:active, .opcaoMenu:active{
+    transition: 0.2s;
+    background-color: #eef87ca0;
+    
 }
 
 .opcao div:hover{
