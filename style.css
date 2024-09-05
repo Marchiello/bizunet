@@ -41,12 +41,14 @@ header{
     height: 10vw;
     padding: 1em;
     z-index: 1;
+    /* margin-bottom: 8vw; */
 }
 
 #camuflado{
-    margin-top: 3em;
-    /* width: 100%; */
-    height: 16.36vw;
+    background-image: url(sources/images/camu2.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
     z-index: 0;
     position: absolute;
 }
@@ -102,6 +104,7 @@ main{
     background-size: 100%;
     background-repeat: no-repeat;
     height: 55vw;
+    margin-top: -7vw;
 }
 
 #credito {

@@ -1,0 +1,64 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+}
+
+h1{
+    color: white;
+    font-size: 12vw;
+}
+
+section h2{
+    font-size: 6vw;
+}
+
+#carrossel{
+    /* background-color: aqua; */
+    padding: 2vw;
+    height: 40vw;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    gap: 3vw;
+    margin: -3vw 0 2vw 0;
+    text-align: center;
+}
+
+#carrossel p{
+    text-align: center;
+    margin-bottom: 6vw;
+}
+
+#carrosselContent{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 3px;
+    height: 23vw;
+}
+
+.temasCarrossel{
+    background-color: #EEF87C;
+    width: 20vw;
+    height: 20vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    line-height: 4vw;
+}
+
+.temasCarrossel h2{
+    color: black    ;
+    font-size: 2vw;
+}
+
+/* ------------------ Conteudo */
+
+.conteudo{
+    margin-top: 12vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
