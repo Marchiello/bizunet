@@ -1,9 +1,8 @@
 window.addEventListener("DOMContentLoaded", () =>{
 
-    let menuIcone = document.querySelector('#menuIcone');
-    let menuOpcoes = document.querySelector('#menuDiv');
-    let menuAtivado = true;
-    let camuflado = document.querySelector('#camuflado')
+    let menuIcone = document.querySelector('#menuIcone')
+    let menuOpcoes = document.querySelector('#menuDiv')
+    let menuAtivado = true
 
     console.log("Funcionando!")
     
@@ -23,72 +22,71 @@ window.addEventListener("DOMContentLoaded", () =>{
     let ordemUnida = document.getElementById("ordemUnida")
     let cfc = document.getElementById("cfc")
     let campo = document.getElementById("campo")
+    let armamento = document.getElementById("armamento")
+    let cancoes = document.getElementById("cancoes")
     
     let opcaoFardamento = document.getElementById("1")
     let opcaoinstrucaoGeral = document.getElementById("2")
     let opcaoOrdemUnida = document.getElementById("3")
     let opcaoCfc = document.getElementById("4")
     let opcaoCampo = document.getElementById("5")
-    // let conteudosHTML = document.getElementsByClassName('conteudo')
+    let opcaoArmamento = document.getElementById("6")
+    let opcaoCancoes = document.getElementById("7")
 
-    let conteudos = [fardamento, instrucaoGeral, ordemUnida, cfc, campo]
+    let conteudos = [fardamento, instrucaoGeral, ordemUnida, cfc, campo, armamento, cancoes]
 
-    let opcoes = [opcaoFardamento, opcaoinstrucaoGeral, opcaoOrdemUnida, opcaoCfc, opcaoCampo]
+    let opcoes = [opcaoFardamento, opcaoinstrucaoGeral, opcaoOrdemUnida, opcaoCfc, opcaoCampo, opcaoArmamento, opcaoCancoes]
 
+    function zerarConteudo(){
+        for(let pos = 0; pos < opcoes.length ; pos++){
+            conteudos[pos].style.display = 'none'
+            opcoes[pos].style.borderBottom = 'none'
+        }
+    }
   
     // ---- "Ouvidores"
 
     // Da pra melhorar isso daqui e muito
 
     opcaoFardamento.addEventListener('click', () => {
-        for(let pos = 1; pos <= 4; pos++){
-            console.log(conteudos[pos])
-            conteudos[pos].style.display = 'none'
-            opcoes[pos].style.borderBottom = 'none'
-        }
+        zerarConteudo()
         fardamento.style.display = 'flex'
         opcaoFardamento.style.borderBottom = 'solid 10px white'
     })
 
     opcaoinstrucaoGeral.addEventListener('click', () => {
-        for(let pos = 0; pos <= 4; pos++){
-            console.log(conteudos[pos])
-            conteudos[pos].style.display = 'none'
-            opcoes[pos].style.borderBottom = 'none'
-        }
+        zerarConteudo()
         instrucaoGeral.style.display = 'flex'
         opcaoinstrucaoGeral.style.borderBottom = 'solid 10px white'
     })
     
     opcaoOrdemUnida.addEventListener('click', () => {
-        for(let pos = 0; pos <= 4; pos++){
-            console.log(conteudos[pos])
-            conteudos[pos].style.display = 'none'
-            opcoes[pos].style.borderBottom = 'none'
-        }
+        zerarConteudo()
         ordemUnida.style.display = 'flex'
         opcaoOrdemUnida.style.borderBottom = 'solid 10px white'
     })
     
     opcaoCfc.addEventListener('click', () => {
-        for(let pos = 0; pos <= 4; pos++){
-            console.log(conteudos[pos])
-            conteudos[pos].style.display = 'none'
-            opcoes[pos].style.borderBottom = 'none'
-        }
+        zerarConteudo()
         cfc.style.display = 'flex'
         opcaoCfc.style.borderBottom = 'solid 10px white'
     })
     
     opcaoCampo.addEventListener('click', () => {
-        for(let pos = 0; pos <= 4; pos++){
-            console.log(conteudos[pos])
-            conteudos[pos].style.display = 'none'
-            opcoes[pos].style.borderBottom = 'none'
-        }
+        zerarConteudo()
         opcaoCampo.style.borderBottom = 'solid 10px white'
         campo.style.display = 'flex'
-        opcaoCampo.style.borderBottom = 'solid 10px white'
     })
-    
+
+    opcaoArmamento.addEventListener('click', () => {
+        zerarConteudo()
+        opcaoArmamento.style.borderBottom = 'solid 10px white'
+        armamento.style.display = 'flex'
+    })
+
+    opcaoCancoes.addEventListener('click', () => {
+        zerarConteudo()
+        opcaoCancoes.style.borderBottom = 'solid 10px white'
+        cancoes.style.display = 'flex'
+    })
 })

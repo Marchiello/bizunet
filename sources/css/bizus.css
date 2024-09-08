@@ -13,35 +13,37 @@ section h2{
 }
 
 #carrossel{
-    /* background-color: aqua; */
-    padding: 2vw;
-    height: 40vw;
+    padding: 0vw;
+    height: fit-content;
     justify-content: center;
     align-items: center;
     display: block;
     gap: 3vw;
-    margin: -3vw 0 2vw 0;
+    margin: -2vh 0 5vw 0;
     text-align: center;
 }
 
 #carrossel p{
     text-align: center;
+    height: fit-content;
     margin-bottom: 6vw;
 }
 
 #carrosselContent{
-    /* background-color: aqua; */
     display: flex;
     flex-direction: row;
     overflow: hidden;
     gap: 3px;
-    height: 23vw;
+    height: 100%;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    
 }
 
 .temasCarrossel{
     background-color: #EEF87C;
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -54,11 +56,110 @@ section h2{
     font-size: 2vw;
 }
 
+
+
+.topico{
+
+    h4, h5, h6{
+        color: white;
+        font-family: 'Stardos Stencil';
+        text-align: center;
+    }
+
+    h3{
+        background-color: #132510;
+        padding: 1vw;
+    }
+
+    h4{
+        text-decoration: underline;
+        font-size: 3.5vw;
+        margin: 4vw 0 6vw 0
+    }
+
+    h5{
+        font-size: 3vw;
+        margin: 3vw 0 3vw 0;
+    }
+
+    h6{
+        font-size: 2.5vw;
+    }
+    
+
+    p{
+        /* background-color: #EEF87C; */
+        margin: 1vw;
+        /* padding: 1vw; */
+    }
+
+}
+
 /* ------------------ Conteudo */
 
-.conteudo{
-    margin-top: 12vw;
-    display: none;
+.topico{
+    /* margin-top: 12vw; */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width:450px){
+    #carrossel{
+        margin-top: 2vw;
+    }
+
+    #carrosselContent{
+        justify-content: center;
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .temasCarrossel{
+        width: 23.5vw;
+        height: 23.5vw;
+    }
+
+    .temasCarrossel h2{
+        font-size: 3.5vw;
+    }
+
+    .topico{
+
+        h2{
+            font-size: 10vw;
+        }
+
+        h3{
+            font-size: 6vw;
+        }
+
+    
+        h4{
+            font-size: 5.5vw;
+        }
+    
+        h5{
+            font-size: 5vw;
+        }
+    
+        h6{
+            font-size: 5.5vw;
+        }
+        
+        h3{
+            background-color: #132510;
+            padding: 1vw;
+        }
+    
+        p{
+            /* background-color: #EEF87C; */
+            margin: 1vw;
+            /* padding: 1vw; */
+        }
+    
+    }
+    
+
 }
