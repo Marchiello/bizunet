@@ -71,7 +71,11 @@ header nav a{
 /* ---------------------- Menu */
 
 #menu{
-    margin-bottom: 4vw;
+    z-index: 1000;
+    height: fit-content;
+    width: 100%;
+    margin-top: 29vw;
+    position: fixed;
 }
 
 #menuDiv{
@@ -102,7 +106,6 @@ main{
     background-size: 100%;
     background-repeat: no-repeat;
     height: 55vw;
-    margin-top: -7vw;
 }
 
 #credito {
@@ -111,6 +114,10 @@ main{
     margin: -10vw 0vw 0vw 69vw;
     font-size: 2.4vw;
     z-index: 2;
+}
+
+#fotoIntro{
+    margin-top: 4vw;
 }
 
 #textoIntro{
@@ -234,8 +241,12 @@ footer{
     }
 
     header{
+        display: flex;
+        position: fixed;
         height: 22vw;
+        width: 100%;
         background-color: rgb(26, 26, 26);
+        z-index: 1000;
     }
     
     #titulo{
@@ -252,25 +263,26 @@ footer{
 
     #camuflado{
         margin-top: 25vw;
-        display: none;
+        /* display: none; */
     }
 
     #imagem{
-        margin-top: -7vw;
-        /* Ta podendo?? */
+        margin-top: 36vw;
+        background-size: 120%;
+        background-position-x: -20vw;
     }
 
     #textoIntro{
-        /* background-color: #EEF87C; */
+        /* background-color: aliceblue; */
         margin: 10vw 0 auto 1vw;
-        font-size: 4.9vw;
-        width: 64vw;
+        font-size: 5.4vw;
+        width: 55vw;
         overflow: hidden;
     }
 
     #creditoTextoIntro{
-        margin: 46vw 0 auto 18vw;
-        font-size: 4vw;
+        margin: 46vw 0 auto 11vw;
+        font-size: 4.5vw;
     }
 
     #credito{
@@ -306,6 +318,7 @@ footer{
     #objetivo p{
         width: 90vw;
     }
+
 
 }
 /* ------------ Decoracao */
