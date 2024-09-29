@@ -167,6 +167,13 @@ main{
     height: 20vw;
 }
 
+#semanaZero p{
+    /* background-color: #ffffff; */
+    text-align: center;
+    width: 60vw;
+    margin: 3vw 0 3vw 0;
+}
+
 #semanaZero img{
     width: 25vw;
 }
@@ -259,17 +266,18 @@ footer{
 
     #menuIcone{
         display: inline;
+        margin-right: 14vw;
     }
 
     #camuflado{
-        margin-top: 25vw;
-        /* display: none; */
+        margin-top: 15vw;
     }
 
     #imagem{
-        margin-top: 36vw;
+        margin-top: 32vw;
         background-size: 120%;
         background-position-x: -20vw;
+        height: 68vw;
     }
 
     #textoIntro{
@@ -281,8 +289,8 @@ footer{
     }
 
     #creditoTextoIntro{
-        margin: 46vw 0 auto 11vw;
-        font-size: 4.5vw;
+        margin: 58vw 0 auto 11vw;
+        font-size: 4.4vw;
     }
 
     #credito{
@@ -293,6 +301,11 @@ footer{
         width:80vw;
         height: 50vw;
         margin-bottom: 15vw;
+    }
+
+    #semanaZero p{
+        width: 80vw;
+        margin: 5vw auto 5vw auto;
     }
 
     #semanaZero h2{

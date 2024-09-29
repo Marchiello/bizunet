@@ -7,8 +7,10 @@ window.addEventListener("DOMContentLoaded", () =>{
     menuIcone.addEventListener('click', () => {
         if(menuAtivado){
             menuOpcoes.style.display = "flex";
+            menuIcone.style.background= "#eef87cad";
         } else{
             menuOpcoes.style.display = "none";
+            menuIcone.style.background="none";
         }
         menuAtivado = !menuAtivado;
     })

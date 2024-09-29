@@ -1,5 +1,4 @@
 body{
-    background-color: antiquewhite;
     display: flex;
 }
 
@@ -18,7 +17,6 @@ section h2{
     justify-content: center;
     align-items: center;
     display: block;
-    gap: 3vw;
     margin: -2vh 0 5vw 0;
     text-align: center;
 }
@@ -56,6 +54,59 @@ section h2{
     font-size: 2vw;
 }
 
+.cancao{
+    margin:3vw 2vw 10vw 2vw;
+}
+
+.audio{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+audio{
+    border: 5px black solid;
+    border-radius: 30px;
+}
+
+.download{
+    background-color: #EEF87C;
+    width: 18vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    font-size: 2vw;
+    margin-left: 2vw;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.download a{
+    color: black;
+    font-family: "stencil";
+}
+
+.download:hover{
+    background-color: #ffffff;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.letra{
+    background-color: white;
+    color: black;
+    width: 50vw;
+    height: 20vw;
+    overflow-y: scroll;
+    margin: auto;
+    margin-top: -2vw;
+}
+
+.letra p{
+    color:black;
+    text-align: center;
+}
 
 
 .topico{
@@ -69,12 +120,13 @@ section h2{
     h3{
         background-color: #132510;
         padding: 1vw;
+        width: 96.8vw;
     }
 
     h4{
         text-decoration: underline;
         font-size: 3.5vw;
-        margin: 4vw 0 6vw 0
+        margin: 4vw 0 2vw 0
     }
 
     h5{
@@ -99,13 +151,17 @@ section h2{
 
 .topico{
     /* margin-top: 12vw; */
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-@media (max-width:550px){
+@media (max-width:450px){
+    #camuflado{
+        margin-top: 25vw;
+    }
+    
     #carrossel{
         margin-top: 38vw;
     }
@@ -160,6 +216,36 @@ section h2{
             /* padding: 1vw; */
         }
     
+    }
+
+    .cancao{
+
+        .audio{
+            width: fit-content;
+            flex-direction: column;
+            margin: auto;
+            margin-bottom: 10vw;
+        }
+
+        audio{
+            width: 80vw;
+            margin-bottom: 6vw;
+        }
+
+        .download{
+            width: 40vw;
+            height: 15vw;
+            line-height: 15vw;
+            font-size: 5vw;
+        }
+
+        .letra{
+            width: 84vw;
+            height: 30vh;
+        }
+
+        margin-bottom: 25vw;
+
     }
     
 
